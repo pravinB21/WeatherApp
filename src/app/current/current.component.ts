@@ -91,7 +91,7 @@ export class CurrentComponent implements OnInit {
   }
 
   getCurrent(): Observable<any> {
-    return this.http.get(`http://api.openweathermap.org/data/2.5/weather?lat=${this.lat}&lon=${this.lon}&appid=2d6947d8f6988efe62da93bc86547891`)
+    return this.http.get(`https://api.openweathermap.org/data/2.5/weather?lat=${this.lat}&lon=${this.lon}&appid=2d6947d8f6988efe62da93bc86547891`)
   }
 
 
@@ -127,25 +127,25 @@ export class CurrentComponent implements OnInit {
  
 
   getCityTemp1() {
-    return this.http.get(`http://api.weatherapi.com/v1/current.json?key=fdcf8f64d4f04a15a8f61530211804&q=mumbai&aqi=no`)
+    return this.http.get(`https://api.weatherapi.com/v1/current.json?key=fdcf8f64d4f04a15a8f61530211804&q=mumbai&aqi=no`)
   }
   getCityTemp() {
-    return this.http.get(`http://api.weatherapi.com/v1/current.json?key=fdcf8f64d4f04a15a8f61530211804&q=${this.cityName}&aqi=no`)
+    return this.http.get(`https://api.weatherapi.com/v1/current.json?key=fdcf8f64d4f04a15a8f61530211804&q=${this.cityName}&aqi=no`)
   }
 
   getforecast() {
-    return this.http.get(`http://api.weatherapi.com/v1/forecast.json?key=a0024eb272124f0abdc73654211804&q=${this.cityName}&days=4&aqi=no&alerts=no`)
+    return this.http.get(`https://api.weatherapi.com/v1/forecast.json?key=a0024eb272124f0abdc73654211804&q=${this.cityName}&days=4&aqi=no&alerts=no`)
   }
   getforecast2() {
-    return this.http.get(`http://api.weatherapi.com/v1/forecast.json?key=a0024eb272124f0abdc73654211804&q=mumbai&days=4&aqi=no&alerts=no`)
+    return this.http.get(`https://api.weatherapi.com/v1/forecast.json?key=a0024eb272124f0abdc73654211804&q=mumbai&days=4&aqi=no&alerts=no`)
   }
 
   getforecast1() {
-    return this.http.get(`http://api.weatherapi.com/v1/forecast.json?key=a0024eb272124f0abdc73654211804&q=${this.option}&days=4&aqi=no&alerts=no`)
+    return this.http.get(`https://api.weatherapi.com/v1/forecast.json?key=a0024eb272124f0abdc73654211804&q=${this.option}&days=4&aqi=no&alerts=no`)
   }
 
   getsearchWeather() {
-    return this.http.get(`http://api.weatherapi.com/v1/current.json?key=fdcf8f64d4f04a15a8f61530211804&q=${this.option}&aqi=no`)
+    return this.http.get(`https://api.weatherapi.com/v1/current.json?key=fdcf8f64d4f04a15a8f61530211804&q=${this.option}&aqi=no`)
   }
 
   key: any;
