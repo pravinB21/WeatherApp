@@ -1,0 +1,42 @@
+/* body {
+    background-image: url('/backg.jpg');
+  } */
+#btn1{
+    margin: 10px;
+}
+#btn2{
+    margin: 10px;
+    float: right;
+}
+.hh{
+    margin: 10px;
+    text-align: center;
+}
+#usr{
+    margin-top: 31px;
+    float: right;
+}
+#btn3{
+    margin-top: 31px;
+}
+#con{
+    background: url("https://www.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_8562848.htm#page=1&query=cloud&position=17");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+}
+a:visited {
+    color: white;
+  }
+.container-fluid{
+      border-radius: 10px;
+  }
+
+#card1{
+    box-shadow: 2px 2px 2px 2px;
+    transition: transform .2s;
+}
+#card1:hover{
+    /* background-color: red; */
+    transform: scale(1.05);
+}

@@ -1,0 +1,121 @@
+<div class="container-fluid" id="con">
+    <div class="container-fluid bg-danger  " style="height:60px">
+        <div class="row">
+            <div class="col">
+                <button id="btn1" class="btn btn-primary  " (click)="getLocation()">Get your location temp</button><br>
+            </div>
+            <div class="col">
+                <h4 class="hh"><i>"Weather App"</i> </h4>
+            </div>
+            <div class="col">
+                <button id="btn2" class="btn btn-info "><a routerLink="/settings">Settings</a></button>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container-fluid p-3  bg-secondary">
+        <div class="row">
+            <!-- <div class="col-sm-3">
+                <button class="btn btn-primary display-4 " (click)="getLocation()">Get your location temp</button><br>
+            </div> -->
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label  for="sel1">City list:</label>
+                    <select class="form-control" id="sel1" (change)="getOption($event)">
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                
+            </div>
+            <div class="col-sm-3">
+
+                <input #in type="text" class="form-control" id="usr" placeholder="Enter City Name">
+            </div>
+            <div class="col-sm-3">
+                  <button type="button"  (click)="getTemp(in.value)" style="background:linear-gradient(90deg, #E80A89 0%, #F15B2A 100%)" id="btn3" class="btn btn-primary">Search</button>
+            </div>
+           
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid" >
+
+        <div class="card mx-auto d-flex" style="width:200px" id="card1">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <div>
+                            <img src="{{users.current.condition.icon}}" width="100px" class="rounded">
+
+                        </div>
+                        <h6 class="card-text">{{users.location.name}}</h6>
+                        <h6 class="card-text">{{users.current.temp_c}}<sup>o</sup>C</h6>
+                        <h6 class="card-text text-warning">{{users.current.condition.text}}</h6>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+      
+    </div>
+
+
+    
+    <hr>
+    <div class="container">
+        <h1 class="display-4" style="text-align:center">Forecast</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card border-0" style="width:200px" id="card1">
+                    <div>
+                        <img src="{{forecastdata.forecast.forecastday[0].day.condition.icon}}" width="100%"
+                            class="rounded">
+
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-text">{{forecastdata.forecast.forecastday[0].date}}</h6>
+
+                        <h6 class="card-text"> {{forecastdata.forecast.forecastday[0].day.avgtemp_c}}<sup>o</sup>C</h6>
+                        <h6 class="card-text text-warning">{{forecastdata.forecast.forecastday[0].day.condition.text}}</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card border-0" style="width:200px" id="card1">
+                    <div>
+                        <img src="{{forecastdata.forecast.forecastday[1].day.condition.icon}}" width="100%"
+                            class="rounded">
+
+                    </div>
+                    <div class="card-body">
+                        <h6>{{forecastdata.forecast.forecastday[1].date}}</h6>
+
+                        <h6> {{forecastdata.forecast.forecastday[1].day.avgtemp_c}} <sup>o</sup>C</h6>
+                        <h6 class="card-text text-warning">{{forecastdata.forecast.forecastday[0].day.condition.text}}</h6>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card border-0" style="width:200px" id="card1">
+                    <div>
+                        <img src="{{forecastdata.forecast.forecastday[2].day.condition.icon}}" width="100%"
+                            class="rounded">
+
+                    </div>
+                    <div class="card-body">
+                        <h6>{{forecastdata.forecast.forecastday[2].date}}</h6>
+
+                        <h6> {{forecastdata.forecast.forecastday[2].day.avgtemp_c}}<sup>o</sup>C</h6>
+                        <h6 class="card-text text-warning">{{forecastdata.forecast.forecastday[0].day.condition.text}}</h6>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
